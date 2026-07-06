@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,71 +11,90 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 body{
+    background:linear-gradient(135deg,#141E30,#243B55);
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    overflow:hidden;
 }
 
 .container{
-    text-align:center;
-    background:rgba(255,255,255,0.12);
-    padding:50px;
+    background:#fff;
+    width:700px;
     border-radius:20px;
-    backdrop-filter:blur(10px);
-    box-shadow:0 8px 30px rgba(0,0,0,0.4);
-    color:white;
-    width:80%;
-    max-width:700px;
+    padding:50px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
 }
 
 h1{
+    color:#0d6efd;
     font-size:48px;
-    color:#00e5ff;
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 
 h2{
-    color:#ffffff;
-    margin-bottom:20px;
+    color:#444;
+    margin-bottom:25px;
 }
 
 p{
-    font-size:20px;
-    color:#f1f1f1;
+    font-size:18px;
+    color:#666;
+    line-height:1.8;
     margin-bottom:30px;
-    line-height:1.6;
 }
 
 button{
-    padding:15px 35px;
+    background:#0d6efd;
+    color:white;
     border:none;
-    border-radius:30px;
-    background:#00e5ff;
-    color:#000;
+    padding:15px 35px;
     font-size:18px;
-    font-weight:bold;
+    border-radius:30px;
     cursor:pointer;
     transition:.3s;
 }
 
 button:hover{
-    background:#00bcd4;
+    background:#084298;
     transform:scale(1.05);
 }
 
-.footer{
-    margin-top:30px;
-    font-size:16px;
-    color:#ddd;
+.features{
+    display:flex;
+    justify-content:space-around;
+    margin-top:35px;
+}
+
+.box{
+    background:#f5f5f5;
+    width:30%;
+    padding:20px;
+    border-radius:12px;
+}
+
+.box h3{
+    color:#0d6efd;
+    margin-bottom:10px;
+}
+
+footer{
+    margin-top:40px;
+    color:#777;
+    font-size:15px;
 }
 </style>
+
+<script>
+function welcome(){
+    alert("Welcome! Your Maven Web Application is running successfully on Apache Tomcat.");
+}
+</script>
 
 </head>
 
@@ -82,30 +102,42 @@ button:hover{
 
 <div class="container">
 
-<h1>🚀 Welcome to IRONRODBATCH</h1>
+<h1>IRONRODBATCH</h1>
 
 <h2>Apache Maven Web Application</h2>
 
 <p>
-Congratulations! 🎉<br><br>
-Your Maven project has been successfully created and deployed using
-<strong>Java 21</strong>, <strong>Apache Maven</strong>,
-<strong>Apache Tomcat 9</strong>, and <strong>GitHub</strong>.
+Congratulations!<br><br>
+Your Maven Web Application has been deployed successfully using
+<b>Java 21</b>, <b>Apache Maven</b>, <b>Apache Tomcat 9</b>, and <b>GitHub</b>.
 </p>
 
-<button onclick="showMessage()">Explore Project</button>
+<button onclick="welcome()">Explore Project</button>
 
-<div class="footer">
-Developed by <strong>S. Dharani</strong>
+<div class="features">
+
+<div class="box">
+<h3>Java 21</h3>
+<p>Modern Java Development</p>
+</div>
+
+<div class="box">
+<h3>Maven</h3>
+<p>Build Automation Tool</p>
+</div>
+
+<div class="box">
+<h3>Tomcat</h3>
+<p>Web Application Server</p>
 </div>
 
 </div>
 
-<script>
-function showMessage(){
-    alert("🎉 Congratulations! Your Maven Web Application is running successfully on Apache Tomcat.");
-}
-</script>
+<footer>
+Developed by <b>S. Dharani</b>
+</footer>
+
+</div>
 
 </body>
 </html>
